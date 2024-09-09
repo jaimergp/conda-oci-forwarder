@@ -10,5 +10,7 @@ COPY . /app
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
+EXPOSE 8000
+
 # Define the entry point for the container
-CMD ["fastapi", "run", "--host=0.0.0.0", "app.py"]
+CMD ["fastapi", "run", "--host=0.0.0.0", "--port=8000", "app.py"]
